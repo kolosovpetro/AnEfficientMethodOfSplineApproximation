@@ -1,0 +1,31 @@
+name: Build PDF
+
+on:
+  push:
+    branches:
+      - develop
+      - master
+      - main
+      - release/*
+  pull_request:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+env:
+  ACTIONS_RUNNER_DEBUG: false
+
+jobs:
+  build-pdf:
+    uses: kolosovpetro/github-latex-template/.github/workflows/build-pdf-template.yml@main
+    with:
+      file_name: 'GithubLatexTemplate'
+      runs_on: 'ubuntu-latest'
+      workflow_name: 'Build PDF'
+      build_assets_path: |
+        src/GithubLatexTemplate.tex
+        src/GithubLatexTemplate.bbl
+        src/GithubLatexTemplate.bib
+        src/sections
+      working_directory_for_latex: 'src'
