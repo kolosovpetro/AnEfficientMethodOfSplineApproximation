@@ -1,15 +1,24 @@
-﻿f1[X_] := X^7;
+﻿(* Requires package: PlotsOfClosedForms.m *)
+
+f1[X_] := X^7;
 f2[X_] := P[3, X, 50];
 absError[X_] := Abs[f1[X] - f2[X]];
 relativeError[X_] := absError[X]/ Abs[f1[X]];
 percentError[X_] := relativeError[X]*100;
 
-(*Generate the table with step 0.1 from 0.5 to 4*)
+(* Generate the table with step 0.1 *)
 step = 0.1;
 range = Range[20, 90, step];
 table = Table[{x, f1[x], f2[x], absError[x], relativeError[x],
     percentError[x]}, {x, range}];
 
-(*Print the table*)
+(* Print the table *)
 Grid[Prepend[table, {"X", "X^7", "P", "ABS", "Relative" , "% Error"}],
   Frame -> All]
+
+
+(*Generate plots*)
+Plot[{X^5, 900 X^2 - 6000 X + 10624}, {X, 0, 6},
+ PlotLabels -> "Expressions", AxesLabel -> {Automatic, F[X]},
+ Epilog -> {Black, PointSize@Medium, Point[{4, 4^5}]},
+ PlotStyle -> {Thickness[0.004]}]

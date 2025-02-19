@@ -45,14 +45,14 @@ To showcase the concrete values of absolute, relative and percentage errors of a
 table in addenda.
 
 One more interesting observation can be done by increasing the value of $N$ in $P(m, X, N)$ having fixed $m$, it
-follows that by increasing $N$ the interval of convergence with odd-power $X^{2m+1}$ increasing as well.
+follows that by increasing $N$ the length of interval of convergence with odd-power $X^{2m+1}$ increasing as well.
 For instance,
 \begin{itemize}
     \item Having $P(2, X, 4)$ the interval of convergence with percentage error lesser than $1\%$ is $4.0 \leq X \leq 5.1$
     \item Having $P(2, X, 20)$ the interval of convergence with percentage error lesser than $1\%$ is $18.7 \leq X \leq 22.9$
     \item Having $P(2, X, 120)$ the interval of convergence with percentage error lesser than $1\%$ is $110.0 \leq X \leq 134.7$
 \end{itemize}
-The reason why convergence interval rises as $N$ rise lays beneath the implicit form of polynomial $P(m,X,N)$
+The reason why the lenght of convergence interval rises as $N$ rise lays beneath the implicit form of polynomial $P(m,X,N)$
 meaning that
 \begin{align*}
     P(m,X,N) = \sum_{r=0}^{m} (-1)^{m-r} U(m, N, r) \cdot X^{r}
@@ -62,3 +62,12 @@ where $U(m, N, r)$ is a polynomial defined as follows
     U(m, N, r) = (-1)^m \sum_{k=1}^{N} \sum_{j=r}^{m} \binom{j}{r} \coeffA{m}{j} k^{2j-r} (-1)^j
 \end{align*}
 which rises as $N$ rise.
+
+To wrap up the current state of the manuscript, refresh the key facts and finding we got so far,
+therefore, the polynomial $P(m,X,N)$ is an $m$-degree polynomial in $X$, having fixed non-negative
+integers $m$ and $N$.
+It approximates odd power function in some neighborhood of fixed $N$.
+The length of interval of convergence between $X^{2m+1}$ and $P(m,X,N)$ rises as $N$ rise.
+
+For the sake of clear and definite results verification I attach mathematica programs to generate
+plots and data tables so that reader is able to verify the main results of current part of manuscript, these are
