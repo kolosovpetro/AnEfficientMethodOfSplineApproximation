@@ -1,3 +1,38 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{alekseyev2018mathoverflow}
+{Alekseyev, Max}.
+\newblock {MathOverflow answer 297916/113033}, 2018.
+\newblock \url{https://mathoverflow.net/a/297916/113033}.
+
+\bibitem{on_the_link_between_binomial_theorem_and_discrete_convolution}
+{Kolosov, Petro}.
+\newblock {On the link between binomial theorem and discrete convolution}.
+\newblock {\em {arXiv preprint arXiv:1603.02468}}, 2016.
+\newblock \url{https://arxiv.org/abs/1603.02468}.
+
+\bibitem{unusual_identity_for_odd_powers}
+{Kolosov, Petro}.
+\newblock {106.37 An unusual identity for odd-powers}.
+\newblock {\em {The Mathematical Gazette}}, 106(567):509--513, 2022.
+\newblock \url{https://doi.org/10.1017/mag.2022.129}.
+
+\bibitem{history_and_overview_of_polynomial_p}
+Petro Kolosov.
+\newblock {History and overview of the polynomial P(m,b,x)}, 2024.
+\newblock
+  \url{https://kolosovpetro.github.io/pdf/HistoryAndOverviewOfPolynomialP.pdf}.
+
+\bibitem{oeis_numerators_of_the_coefficient_a_m_r}
+Petro Kolosov.
+\newblock {Entry A302971 in The On-Line Encyclopedia of Integer Sequences},
+  2018.
+\newblock \url{https://oeis.org/A302971}.
+
+\bibitem{oeis_denominators_of_the_coefficient_a_m_r}
+Petro Kolosov.
+\newblock {Entry A304042 in The On-Line Encyclopedia of Integer Sequences},
+  2018.
+\newblock \url{https://oeis.org/A304042}.
 
 \end{thebibliography}

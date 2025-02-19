@@ -2,6 +2,8 @@ param (
     [string]$OutputDirectory = "../out"
 )
 
+$ErrorActionPreference = "Stop"
+
 Write-Output "Setting working directory to PSScriptRoot: $PSScriptRoot"
 Set-Location -Path $PSScriptRoot
 
