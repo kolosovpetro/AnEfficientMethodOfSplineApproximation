@@ -35,7 +35,7 @@ In fact, we approximate the polynomial $X^{2m+1}$ by lower degree polynomial $X^
     \includegraphics[width=1\textwidth]{sections/images/03_plots_polynomial_p2_n4_with_fifth}
     ~\caption{Polynomial plot $P(2, X, 4)$ with fifth power $X^5$.
     Points of intersection $X=4$, $X=4.42472$, $X=4.99181$.
-    Interval of convergence: $3.9 \leq X \leq 5.3$ with $E < 2\%$.
+    Interval of convergence: $3.9 \leq X \leq 5.3$ with percentage error $E < 2\%$.
     }\label{fig:03_plots_polynomial_p2_n4_with_fifth}
 \end{figure}
 As we see, the interval $3.9 \leq X \leq 5.3$ has the percentage error lesser than $2\%$ which is quite impressive.
@@ -70,4 +70,18 @@ It approximates odd power function in some neighborhood of fixed $N$.
 The length of interval of convergence between $X^{2m+1}$ and $P(m,X,N)$ rises as $N$ rise.
 
 For the sake of clear and definite results verification I attach mathematica programs to generate
-plots and data tables so that reader is able to verify the main results of current part of manuscript, these are
+plots and data tables so that reader is able to verify the main results of current part of manuscript,
+see the \href{https://gist.github.com/kolosovpetro/2b5c55094c66b8d6a97b9798be9a8dec}{\texttt{link}}.
+
+So far we have discussed approximation of odd power function, now we focus on its even case,
+which is quite straightforward.
+Considering the same example $P(2, X, 4)$ we reach the approximation of even power $X^6$
+by means of multiplication, which graphically looks as follows
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{sections/images/07_plot_of_6th_power_with_p_2_4_times_x}
+    ~\caption{Polynomial plot $P(2, X, 4)\cdot X$ with sixth power $X^6$.
+    Interval of convergence: $3.9 \leq X \leq 5.3$ with percentage error $E < 2\%$.
+    }\label{fig:07_plot_of_6th_power_with_p_2_4_times_x}
+\end{figure}
+
