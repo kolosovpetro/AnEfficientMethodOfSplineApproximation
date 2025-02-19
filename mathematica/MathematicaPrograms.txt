@@ -1,4 +1,4 @@
-﻿(* Requires package: PlotsOfClosedForms.m *)
+﻿(* Requires package: PlotsOfClosedForms.m, see https://github.com/kolosovpetro/AnEfficientMethodOfSplineApproximation*)
 
 f1[X_] := X^7;
 f2[X_] := P[3, X, 50];
@@ -17,7 +17,7 @@ Grid[Prepend[table, {"X", "X^7", "P", "ABS", "Relative" , "% Error"}],
   Frame -> All]
 
 
-(*Generate plots*)
+(* Generate plots *)
 Plot[{X^5, 900 X^2 - 6000 X + 10624}, {X, 0, 6},
  PlotLabels -> "Expressions", AxesLabel -> {Automatic, F[X]},
  Epilog -> {Black, PointSize@Medium, Point[{4, 4^5}]},
