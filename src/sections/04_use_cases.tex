@@ -33,43 +33,51 @@ at least $1\%$ percentage error for $X^j \leq 100$.
 I have chosen the approximation range $10 \leq X \leq 15$ and $j=3$ intentionally to show spline approximation with
 percentage error lesser than $1\%$.
 Therefore, to approximate $X^3$ in range $10 \leq X \leq 15$, we have to following spline function
-\begin{align*}
+\begin{align}
     X^3 \approx
     \begin{cases}
-        P(m,X,10) = -2300 + 330X, & 10 \leq X < 11 \\
-        P(m,X,11) = -3025 + 396X, & 11 \leq X < 12 \\
-        P(m,X,12) = -3888 + 468X, & 12 \leq X < 13 \\
-        P(m,X,13) = -4901 + 546X, & 13 \leq X < 14 \\
-        P(m,X,14) = -6076 + 630X, & 14 \leq X \leq 15
+        P(1,X,10) = -2300 + 330X, & 10 \leq X < 11 \\
+        P(1,X,11) = -3025 + 396X, & 11 \leq X < 12 \\
+        P(1,X,12) = -3888 + 468X, & 12 \leq X < 13 \\
+        P(1,X,13) = -4901 + 546X, & 13 \leq X < 14 \\
+        P(1,X,14) = -6076 + 630X, & 14 \leq X \leq 15
     \end{cases}
-\end{align*}
+    \label{eq:spline_approximation_of_cubes}
+\end{align}
 Graphically this linear approximation of cubes looks as follows
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{sections/images/08_plots_of_cubes_power_with_p_2_10_15}
-    ~\caption{Approximation of cubes $X^3$ by splines of $P(m,X,N)$.
-    }\label{fig:08_plots_of_cubes_power_with_p_2_10_15}
+    ~\caption{
+        Approximation of cubes $X^3$ by splines~\eqref{eq:spline_approximation_of_cubes}.
+        Convergence interval is $10 \leq X \leq 15$ with percentage error $E\leq 1\%$.
+    }
+    \label{fig:08_plots_of_cubes_power_with_p_2_10_15}
 \end{figure}
 where spline knots are integers in range $10 \leq N \leq 14$.
 
 The same principle applies for even exponent $j=4$ in $X^j$ with the same convergence interval $10 \leq X \leq 15$
 and approximation error under $1\%$ constraints
-\begin{align*}
+\begin{align}
     X^4 \approx
     \begin{cases}
-        -2300X + 330X^2, & 10 \leq X < 11 \\
-        -3025X + 396X^2, & 11 \leq X < 12 \\
-        -3888X + 468X^2, & 12 \leq X < 13 \\
-        -4901X + 546X^2, & 13 \leq X < 14 \\
-        -6076X + 630X^2, & 14 \leq X \leq 15
+        P(1,X,10) \cdot X = -2300X + 330X^2, & 10 \leq X < 11 \\
+        P(1,X,10) \cdot X = -3025X + 396X^2, & 11 \leq X < 12 \\
+        P(1,X,10) \cdot X = -3888X + 468X^2, & 12 \leq X < 13 \\
+        P(1,X,10) \cdot X = -4901X + 546X^2, & 13 \leq X < 14 \\
+        P(1,X,10) \cdot X = -6076X + 630X^2, & 14 \leq X \leq 15
     \end{cases}
-\end{align*}
+    \label{eq:spline_approximation_fourth_power}
+\end{align}
 Which graphically looks as follows
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{sections/images/09_plots_of_fourth_power_with_p_2_10_15_times_x}
-    ~\caption{Approximation of cubes $X^4$ by splines of $P(m,X,N) \cdot X$.
-    }\label{fig:09_plots_of_fourth_power_with_p_2_10_15_times_x}
+    ~\caption{
+        Approximation of cubes $X^4$ by splines~\eqref{eq:spline_approximation_fourth_power}.
+        Convergence interval is $10 \leq X \leq 15$ with percentage error $E\leq 1\%$.
+    }
+    \label{fig:09_plots_of_fourth_power_with_p_2_10_15_times_x}
 \end{figure}
 In general, for each variation of $X^j$ such that $X^j \geq 100$ the approximation can be done using
 splines in $P(m,X, N)$ over the interval $A \leq X \leq B$ with spline knot vector be the integers in
