@@ -16,7 +16,20 @@ where $\coeffA{m}{r}$ is a real coefficient defined recursively, see~\cite{aleks
 For example,
 \input{sections/figures/05_fig_coefficients_a}
 
-In this manuscript we discuss approximation properties of polynomial $P(m,X,N)$.
+Essentially, the polynomial $P(m, X, N)$ is a result of rearrangement inside Faulhaber's formula.
+It was inspired by Knuth's \textit{Johann Faulhaber and sums of powers}, see~\cite{knuth1993johann}.
+In particular, the polynomial $P(m, X, N)$ yields an identity for odd powers
+\begin{align*}
+    P(m, X, X) = X^{2m+1}
+\end{align*}
+In extended form
+\begin{align*}
+    X^{2m+1} = \sum_{r=0}^{m} \sum_{k=1}^{X} \coeffA{m}{r} k^r (X-k)^r
+\end{align*}
+Precisely, the relation between Faulhaber's formula and $P(m,X,N)$ is shown by~\cite{kolosov2025unexpected}.
+
+However, apart polynomial identity for odd powers, I've spotted several approximation properties of $P(m,X,N)$.
+Therefore, in this manuscript we discuss approximation properties of polynomial $P(m,X,N)$.
 I use a few well-known criteria to measure and estimate error of approximation: Absolute error, Relative error and
 Percentage error.
 Assume that function $f_2(x)$ approximates the function $f_1 (x)$ then the errors are
@@ -64,7 +77,7 @@ where $U(m, N, r)$ is a polynomial defined as follows
 which rises as $N$ rise.
 
 To wrap up the current state of the manuscript, refresh the key facts and finding we got so far,
-therefore, the polynomial $P(m,X,N)$ is an $m$-degree polynomial in $X$, having fixed non-negative
+therefore, the polynomial $P(m,X,N)$ is an $m$-degree polynomial in $X \in \mathbb{R}$, having fixed non-negative
 integers $m$ and $N$.
 It approximates odd power function in some neighborhood of fixed $N$.
 The length of interval of convergence between $X^{2m+1}$ and $P(m,X,N)$ rises as $N$ rise.
@@ -84,4 +97,8 @@ by means of multiplication, which graphically looks as follows
     Interval of convergence: $3.9 \leq X \leq 5.3$ with percentage error $E < 2\%$.
     }\label{fig:07_plot_of_6th_power_with_p_2_4_times_x}
 \end{figure}
-
+Therefore, we have reached the statement that
+the polynomial $P(m,X,N)$ is an $m$-degree polynomial in $X$, having fixed non-negative
+integers $m$ and $N$.
+It approximates power function in some neighborhood of fixed $N$.
+The length of interval of convergence between power function and $P(m,X,N)$ or $P(m,X,N) \cdot X$ rises as $N$ rise.

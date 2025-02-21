@@ -35,4 +35,16 @@ Petro Kolosov.
   2018.
 \newblock \url{https://oeis.org/A304042}.
 
+\bibitem{knuth1993johann}
+{Knuth, Donald E.}
+\newblock {Johann Faulhaber and sums of powers}.
+\newblock {\em {Mathematics of Computation}}, 61(203):277--294, 1993.
+\newblock \url{https://arxiv.org/abs/math/9207222}.
+
+\bibitem{kolosov2025unexpected}
+Petro Kolosov.
+\newblock Unexpected polynomial identity, 2025.
+\newblock
+  \url{https://kolosovpetro.github.io/pdf/UnexpectedPolynomialIdentity.pdf}.
+
 \end{thebibliography}
