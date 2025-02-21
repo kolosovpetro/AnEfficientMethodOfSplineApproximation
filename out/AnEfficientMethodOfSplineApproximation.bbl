@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{alekseyev2018mathoverflow}
 {Alekseyev, Max}.
@@ -46,5 +46,23 @@ Petro Kolosov.
 \newblock Unexpected polynomial identity, 2025.
 \newblock
   \url{https://kolosovpetro.github.io/pdf/UnexpectedPolynomialIdentity.pdf}.
+
+\bibitem{oeis_coefficients_u_m_l_k_defined_by_polynomial_identity_1}
+Petro Kolosov.
+\newblock {The coefficients U(m, l, k), m = 1 defined by the polynomial
+  identity}, 2018.
+\newblock \url{https://oeis.org/A320047}.
+
+\bibitem{oeis_coefficients_u_m_l_k_defined_by_polynomial_identity_2}
+Petro Kolosov.
+\newblock {The coefficients U(m, l, k), m = 2 defined by the polynomial
+  identity}, 2018.
+\newblock \url{https://oeis.org/A316349}.
+
+\bibitem{oeis_coefficients_u_m_l_k_defined_by_polynomial_identity_3}
+Petro Kolosov.
+\newblock {The coefficients U(m, l, k), m = 3 defined by the polynomial
+  identity}, 2018.
+\newblock \url{https://oeis.org/A316387}.
 
 \end{thebibliography}
