@@ -2,20 +2,21 @@
 For instance, approximation requirements should have precisely specified exponent $j$ in $X^j$ because
 for each $j$ there is a matching polynomial $P(m,X,N)$.
 Perfectly, there should be a set precompiled polynomials $P(m,X,N)$ matching precise exponent $j$ in $X^j$ over
-precisely defined approximation range with required error of approximation $E$ constraint.
-Generally, approximation of power function $X^j$ by $P(m,X,N)$ can be split by the following steps
+precisely defined approximation range with required error of approximation $E$ as a constraint.
+Generally, the approximation of power function $X^j$ by $P(m,X,N)$ can be broken down into the following steps
 \begin{enumerate}
-    \item Define exponent $j$ in $X^j$
-    \item Define required error threshold $E$
-    \item Define required interval of approximation $I$
+    \item Define the exponent $j$ in $X^j$
+    \item Define the required error threshold $E$
+    \item Define the required interval of approximation $I$
     \item Choose and precompile polynomials $P(m,X,N)$
-    such that required interval of approximation and error threshold $E$ are satisfied
-    \item Define a set of knots so that error threshold $E$ and interval of approximation $I$ requirements are satisfied
+    so that the required interval of approximation and error threshold $E$ are satisfied
+    \item Define a set of knots so that the error threshold $E$ and the interval of approximation $I$ requirements are satisfied
 \end{enumerate}
-Defining set of spline knots essentially requires inspection of convergence intervals of between $X^j$ and $P(m,X,N+t_k)$
-by choosing knots such that interval of approximation and error threshold are satisfied.
+Defining set of spline knots essentially requires an inspection of the
+convergence intervals between $X^j$ and $P(m,X,N+t_k)$
+by choosing knots such that the interval of approximation and error threshold are satisfied.
 Consider an example.
-Let be the following approximation requirement
+Let be the following approximation requirements
 \begin{enumerate}
     \item Exponent $j=3$
     \item Percentage error threshold $E\leq 1\%$
@@ -30,9 +31,9 @@ of the following properties of $P(m,X, N)$.
 \end{align*}
 Therefore, for each two consequential points $N=X, N=X+1$ the absolute difference is 1, making that range
 at least $1\%$ percentage error for $X^j \leq 100$.
-I have chosen the approximation range $10 \leq X \leq 15$ and $j=3$ intentionally to show spline approximation with
-percentage error lesser than $1\%$.
-Therefore, to approximate $X^3$ in range $10 \leq X \leq 15$, we have to following spline function
+I have chosen the approximation range $10 \leq X \leq 15$ and $j=3$ intentionally to show the spline approximation with
+percentage error threshold less than $1\%$.
+Therefore, to approximate $X^3$ in the range $10 \leq X \leq 15$, we use the following spline function
 \begin{align}
     X^3 \approx
     \begin{cases}
@@ -44,7 +45,7 @@ Therefore, to approximate $X^3$ in range $10 \leq X \leq 15$, we have to followi
     \end{cases}
     \label{eq:spline_approximation_of_cubes}
 \end{align}
-Graphically this linear approximation of cubes looks as follows
+Graphically, this linear approximation of cubes looks as follows
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{sections/images/08_plots_of_cubes_power_with_p_2_10_15}
@@ -54,7 +55,7 @@ Graphically this linear approximation of cubes looks as follows
     }
     \label{fig:08_plots_of_cubes_power_with_p_2_10_15}
 \end{figure}
-where spline knots are integers in range $10 \leq N \leq 14$.
+where the spline knots are integers in the range $10 \leq N \leq 14$.
 
 The same principle applies for even exponent $j=4$ in $X^j$ with the same convergence interval $10 \leq X \leq 15$
 and approximation error under $1\%$ constraints
@@ -87,5 +88,5 @@ Because,
     P(m,X, X) &= X^{2m+1} \\
     P(m,X, X+1) &= (X+1)^{2m+1} - 1
 \end{align*}
-This furthermore can be optimized depending on value of $N$ in $P(m,X,N)$ because convergence interval
-with power function $X^j$ increases as $N$ rises.
+This can be further optimized depending on the value of $N$ in $P(m,X,N)$ because the convergence interval
+with the power function $X^j$ increases as $N$ grows.
