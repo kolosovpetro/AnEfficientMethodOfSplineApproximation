@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 - Update figure captions
 - Equation labeling change
 - Add coefficients U bibliography
+- Fix grammar abstract
 
 ## [1.0.0] - 2025-02-21
 
