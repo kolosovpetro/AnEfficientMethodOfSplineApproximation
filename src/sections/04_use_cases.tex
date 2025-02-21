@@ -3,3 +3,43 @@ For instance, approximation requirements should have precisely specified exponen
 for each $j$ there is a matching polynomial $P(m,X,N)$.
 Perfectly, there should be a set precompiled polynomials $P(m,X,N)$ matching precise exponent $j$ in $X^j$ over
 precisely defined approximation range with required error of approximation $E$ constraint.
+Generally, approximation of power function $X^j$ by $P(m,X,N)$ can be split by the following steps
+\begin{enumerate}
+    \item Define exponent $j$ in $X^j$
+    \item Define required error threshold $E$
+    \item Define required interval of approximation $I$
+    \item Choose and precompile polynomials $P(m,X,N)$
+    such that required interval of approximation and error threshold $E$ are satisfied
+    \item Define a set of knots so that error threshold $E$ and interval of approximation $I$ requirements are satisfied
+\end{enumerate}
+Defining set of spline knots essentially requires inspection of convergence intervals of between $X^j$ and $P(m,X,N+t_k)$
+by choosing knots such that interval of approximation and error threshold are satisfied.
+Consider an example.
+Let be the following approximation requirement
+\begin{enumerate}
+    \item Exponent $j=3$
+    \item Percentage error threshold $E\leq 1\%$
+    \item Interval of approximation $10 \leq X \leq 15$
+\end{enumerate}
+Now we have to choose a set of polynomials $P(m, X, N+t_k)$ based on which we adjust a set of spline knots.
+We can safely choose integers $t_k$ in range $10 \leq t_k \leq 15$ because
+of the following properties of $P(m,X, N)$.
+\begin{align*}
+    P(m,X, X) &= X^{2m+1} \\
+    P(m,X, X+1) &= (X+1)^{2m+1} - 1
+\end{align*}
+Therefore, for each two consequential points $N=X, N=X+1$ the absolute difference is 1, making that range
+at least $1\%$ percentage error for $X^j \leq 100$.
+I have chosen the approximation range $10 \leq X \leq 15$ and $j=3$ intentionally to show spline approximation with
+percentage error lesser than $1\%$.
+Therefore, to approximate $X^3$ in range $10 \leq X \leq 15$, we have to following spline function
+\begin{align*}
+    X^3 \approx
+    \begin{cases}
+        -2300 + 330X, & 10 \leq X < 11 \\
+        -3025 + 396X, & 11 \leq X < 12 \\
+        -3888 + 468X, & 12 \leq X < 13 \\
+        -4901 + 546X, & 13 \leq X < 14 \\
+        -6076 + 630X, & 14 \leq X \leq 15
+    \end{cases}
+\end{align*}

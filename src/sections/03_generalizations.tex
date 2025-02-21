@@ -1,8 +1,9 @@
 ﻿Previously, we have discussed that polynomial $P(m,X,N)$ approximates power function $X^j$
 in some neighborhood of fixed non-negative integer $N$.
-Approximation by $P(m,X,N)$ can be adjusted by $K$-times multiplication by $X$ for even exponents of power function.
-In general, it is safe to say that power function $X^j$ is approximated by $P(m,X,N) \cdot X^k$,
-where $k=0$ for odd exponent $j$ and $k$ either $k=1$ or $k=-1$ for even exponent $j$
+Approximation by $P(m,X,N)$ can be adjusted by $X^k$ multiplication for even exponents of power function.
+In general, it is safe to say that power function $X^j$ is approximated by $P(m,X,N) \cdot X^k$
+where $k=0$ for odd exponent $j$ and $k$ either $k=1$ or $k=-1$ for even exponent $j$.
+Therefore, for arbitrary exponent $j$ in $X^j$ we have
 \begin{align*}
     X^j \approx
     \begin{cases}
@@ -11,7 +12,7 @@ where $k=0$ for odd exponent $j$ and $k$ either $k=1$ or $k=-1$ for even exponen
         P(m,X,N) \cdot X^{-1} \quad & j=2m \\
     \end{cases}
 \end{align*}
-which covers arbitrary exponent $j$.
+Of course, there are other variations of the value of $k$, we stick to simple case for the moment.
 
 As we also discussed, the lenght $L$ of convergence interval between $X^j$ and approximation by $P(m,X,N)$
 rises as $N$ rise.
