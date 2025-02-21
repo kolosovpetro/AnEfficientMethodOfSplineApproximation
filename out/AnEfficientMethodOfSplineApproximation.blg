@@ -5,44 +5,44 @@ Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: unsrt.bst
 Reallocating 'name_of_file' (item size: 1) to 39 items.
 Database file #1: AnEfficientMethodOfSplineApproximation.bib
-You've used 11 entries,
+You've used 9 entries,
             1791 wiz_defined-function locations,
-            508 strings with 5657 characters,
-and the built_in function-call counts, 1638 in all, are:
-= -- 143
-> -- 44
+            497 strings with 5296 characters,
+and the built_in function-call counts, 1382 in all, are:
+= -- 123
+> -- 36
 < -- 0
-+ -- 22
-- -- 11
-* -- 47
-:= -- 261
-add.period$ -- 36
-call.type$ -- 11
-change.case$ -- 11
++ -- 18
+- -- 9
+* -- 45
+:= -- 221
+add.period$ -- 30
+call.type$ -- 9
+change.case$ -- 9
 chr.to.int$ -- 0
-cite$ -- 11
-duplicate$ -- 66
-empty$ -- 207
-format.name$ -- 11
-if$ -- 371
+cite$ -- 9
+duplicate$ -- 56
+empty$ -- 171
+format.name$ -- 9
+if$ -- 311
 int.to.chr$ -- 0
-int.to.str$ -- 11
+int.to.str$ -- 9
 missing$ -- 3
-newline$ -- 61
-num.names$ -- 11
-pop$ -- 58
+newline$ -- 51
+num.names$ -- 9
+pop$ -- 44
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 32
+skip$ -- 27
 stack$ -- 0
 substring$ -- 50
-swap$ -- 11
+swap$ -- 9
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 15
-width$ -- 13
-write$ -- 120
+while$ -- 13
+width$ -- 10
+write$ -- 100
