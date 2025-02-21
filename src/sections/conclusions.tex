@@ -1,0 +1,26 @@
+We have established that $P(m, X, N)$ is an $m$-degree polynomial in $X\in\mathbb{R}$
+having fixed non-negative integers $m$ and $N$.
+
+The polynomial $P(m, X, N)$ is a result of rearrangement inside Faulhaber's formula that
+was inspired by Knuth's \textit{Johann Faulhaber and sums of powers}.
+
+In this manuscript we have discussed approximation properties of polynomial $P(m,X,N)$.
+
+In particular, the polynomial $P(m,X,N)$ approximates odd power function $X^{2m+1}$ in certain neighborhood
+of fixed non-negative integer $N$ with percentage error lesser than $1\%$.
+
+By increasing the value of $N$ the length of convergence interval with odd-power $X^{2m+1}$ increasing as well.
+
+Furthermore, this approximation technique is generalized for arbitrary non-negative exponent power function $X^j$
+by using splines.
+
+In general, for each variation of $X^j$ such that $X^j \geq 100$ the approximation can be done using
+splines in $P(m,X, N)$ over the interval $A \leq X \leq B$ with spline knot vector be the integers in
+range from $A$ to $B$ so that knots vector is $\{A, A+1, A+2, \ldots, B \}$.
+Because,
+\begin{align*}
+    P(m,X, X) &= X^{2m+1} \\
+    P(m,X, X+1) &= (X+1)^{2m+1} - 1
+\end{align*}
+This can be further optimized depending on value of $N$ in $P(m,X,N)$ because convergence interval
+with power function $X^j$ increases as $N$ rises.
