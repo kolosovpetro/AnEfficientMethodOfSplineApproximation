@@ -16,33 +16,34 @@ where $\coeffA{m}{r}$ is a real coefficient defined recursively, see~\cite{aleks
 For example,
 \input{sections/figures/05_fig_coefficients_a}
 
-Essentially, the polynomial $P(m, X, N)$ is a result of rearrangement inside Faulhaber's formula.
+Essentially, the polynomial $P(m, X, N)$ is derived from a rearrangement of Faulhaber's formula.
 It was inspired by Knuth's \textit{Johann Faulhaber and sums of powers}, see~\cite{knuth1993johann}.
 In particular, the polynomial $P(m, X, N)$ yields an identity for odd powers
 \begin{align*}
     P(m, X, X) = X^{2m+1}
 \end{align*}
-In extended form
+In its extended form
 \begin{align*}
     X^{2m+1} = \sum_{r=0}^{m} \sum_{k=1}^{X} \coeffA{m}{r} k^r (X-k)^r
 \end{align*}
-Precisely, the relation between Faulhaber's formula and $P(m,X,N)$ is shown by~\cite{kolosov2025unexpected}.
+The exact relation between Faulhaber's formula and $P(m,X,N)$ is shown by~\cite{kolosov2025unexpected}.
 
-However, apart polynomial identity for odd powers, I've spotted several approximation properties of $P(m,X,N)$.
-Therefore, in this manuscript we discuss approximation properties of polynomial $P(m,X,N)$.
+However, apart from the polynomial identity for odd powers, I've discovered several approximation properties of $P(m,X,N)$.
+Therefore, in this manuscript we explore the approximation properties of the polynomial $P(m,X,N)$.
 I use a few well-known criteria to measure and estimate error of approximation: Absolute error, Relative error and
 Percentage error.
-Assume that function $f_2(x)$ approximates the function $f_1 (x)$ then the errors are
-
+Assume that the function $f_2(x)$ approximates the function $f_1 (x)$, then errors are given by
 \begin{align*}
     \mathrm{Absolute \; Error}   &= \lvert f_1(x) - f_2(x) \rvert \\
     \mathrm{Relative \; Error}   &= \frac{\lvert f_1(x) - f_2(x) \rvert}{\lvert f_1(x) \rvert} \\
     \mathrm{Percentage \; Error} &= \frac{\lvert f_1(x) - f_2(x) \rvert}{\lvert f_1(x) \rvert} \times 100\%
 \end{align*}
 
-Diving straight to the point, we switch our focus to already mentioned polynomial $P(2,X,4) = 900X^2 - 6000X + 10624$
+Diving straight into the point, we switch our focus to the previously mentioned polynomial
+$P(2,X,4) = 900X^2 - 6000X + 10624$
 to show the first example of how it approximates the odd power function $X^5$.
-In fact, we approximate the polynomial $X^{2m+1}$ by lower degree polynomial $X^m$ as the following image presents
+In fact, we approximate the polynomial $X^{2m+1}$ using a lower-degree polynomial of degree $m$,
+as shown in the following image
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{sections/images/03_plots_polynomial_p2_n4_with_fifth}
@@ -51,20 +52,21 @@ In fact, we approximate the polynomial $X^{2m+1}$ by lower degree polynomial $X^
     Convergence interval is $4.0 \leq X \leq 5.1$ with percentage error $E < 1\%$.
     }\label{fig:03_plots_polynomial_p2_n4_with_fifth}
 \end{figure}
-As we see, polynomial $P(2, X, 4)$ approximates $X^5$ in a neighborhood of $N=4$ with
-the convergence interval $4.0 \leq X \leq 5.1$ that has percentage error lesser than $1\%$ which is quite impressive.
-Consider the table below to showcase the concrete values of absolute, relative and percentage errors of this approximation
+As observed, the polynomial $P(2, X, 4)$ approximates $X^5$ in the neighborhood of $N=4$ with
+the convergence interval $4.0 \leq X \leq 5.1$ where the percentage error is less than $1\%$ which is quite remarkable.
+The following table presents specific values of absolute, relative, and percentage errors for this approximation
 \input{sections/figures/032_polynomials_p2_table_n4}
 
-One more interesting observation can be done by increasing the value of $N$ in $P(m, X, N)$ having fixed $m$, it
-follows that by increasing $N$ the length of convergence interval with odd-power $X^{2m+1}$ increasing as well.
+One more interesting observation arises by increasing the value of $N$ in $P(m, X, N)$ while keeping $m$ fixed.
+As $N$ increases, the length of the convergence interval with the odd-power $X^{2m+1}$ also increases.
 For instance,
 \begin{itemize}
-    \item Having $P(2, X, 4)$ and $X^5$ the convergence interval with percentage error lesser than $1\%$ is $4.0 \leq X \leq 5.1$ with lenght of interval $L=1.1$
-    \item Having $P(2, X, 20)$ and $X^5$ the convergence interval with percentage error lesser than $1\%$ is $18.7 \leq X \leq 22.9$ with lenght of interval $L=4.2$
-    \item Having $P(2, X, 120)$ and $X^5$ the convergence interval with percentage error lesser than $1\%$ is $110.0 \leq X \leq 134.7$ with lenght of interval $L=24.7$
+    \item For $P(2, X, 4)$ and $X^5$, the convergence interval with a percentage error less than $1\%$ is $4.0 \leq X \leq 5.1$, with a length $L=1.1$
+    \item For $P(2, X, 20)$ and $X^5$, the convergence interval with a percentage error less than $1\%$ is $18.7 \leq X \leq 22.9$, with a length $L=4.2$
+    \item For $P(2, X, 120)$ and $X^5$, the convergence interval with a percentage error less than $1\%$ is $110.0 \leq X \leq 134.7$, with a length $L=24.7$
 \end{itemize}
-The reason why the lenght of convergence interval rises as $N$ rise lays beneath the implicit form of polynomial $P(m,X,N)$
+
+The reason behind this behavior lies in the implicit form of the polynomial $P(m,X,N)$,
 meaning that
 \begin{align*}
     P(m,X,N) = \sum_{r=0}^{m} (-1)^{m-r} U(m, N, r) \cdot X^{r}
@@ -73,17 +75,16 @@ where $U(m, N, r)$ is a polynomial defined as follows
 \begin{align*}
     U(m, N, r) = (-1)^m \sum_{k=1}^{N} \sum_{j=r}^{m} \binom{j}{r} \coeffA{m}{j} k^{2j-r} (-1)^j
 \end{align*}
-which rises as $N$ rise.
+which grows as $N$ increases.
 Few cases of coefficients $U(m, N, r)$ are registered as OEIS sequences~\cite{
     oeis_coefficients_u_m_l_k_defined_by_polynomial_identity_1,
     oeis_coefficients_u_m_l_k_defined_by_polynomial_identity_2,
-    oeis_coefficients_u_m_l_k_defined_by_polynomial_identity_3}
+    oeis_coefficients_u_m_l_k_defined_by_polynomial_identity_3}.
 
-To wrap up the current state of the manuscript, refresh the key facts and finding we got so far.
-Therefore, the polynomial $P(m,X,N)$ is an $m$-degree polynomial in $X \in \mathbb{R}$, having fixed non-negative
-integers $m$ and $N$.
-It approximates odd power function $X^{2m+1}$ in some neighborhood of fixed $N$.
-The length $L$ of convergence interval between $X^{2m+1}$ and $P(m,X,N)$ rises as $N$ rise.
+To summarize, let us recap the key findings so far.
+The polynomial $P(m,X,N)$ is an $m$-degree polynomial in $X \in \mathbb{R}$ with fixed non-negative integers $m$ and $N$.
+It approximates the odd power function $X^{2m+1}$ within a specific neighborhood of $N$.
+The length $L$ of the convergence interval between $X^{2m+1}$ and $P(m,X,N)$ increases as $N$ grows.
 
 For the sake of clear and precise verification of results, I attach mathematica programs to generate
 plots and data tables, so that reader is able to verify the main results of current part of manuscript,

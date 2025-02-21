@@ -2,7 +2,7 @@
 in some neighborhood of fixed non-negative integer $N$.
 Approximation by $P(m,X,N)$ can be adjusted by $X^k$ multiplication for even exponents of power function.
 In general, it is safe to say that power function $X^j$ is approximated by $P(m,X,N) \cdot X^k$
-where $k=0$ for odd exponent $j$ and $k$ either $k=1$ or $k=-1$ for even exponent $j$.
+where $k=0$ for odd exponent $j$ and $k$ is either $k=1$ or $k=-1$ for an even exponent $j$.
 Therefore, for arbitrary exponent $j$ in $X^j$ we have
 \begin{align*}
     X^j \approx
@@ -12,14 +12,14 @@ Therefore, for arbitrary exponent $j$ in $X^j$ we have
         P(m,X,N) \cdot X^{-1} \quad & j=2m \\
     \end{cases}
 \end{align*}
-Of course, there are other variations of the value of $k$, we stick to simple case for the moment.
+Of course, there are other variations of the value of $k$, but we will stick to the simple case for the moment.
 
-As we also discussed, the lenght $L$ of convergence interval between $X^j$ and approximation by $P(m,X,N)$
-rises as $N$ rise.
+As we also discussed, the length $L$ of the convergence interval between $X^j$ and its approximation by $P(m,X,N)$
+increases as $N$ grow.
 However, the convergence interval is still bounded, which could not satisfy certain approximation scenarios.
-Depending on approximation requirements in terms of convergence interval length $L$ a single polynomial $P(m,X,N)$
-with fixed $m$ and $N$ can be unfit.
-Here is the place where spline approximation comes to play.
+Depending on the approximation requirements in terms of convergence interval length $L$ a single polynomial $P(m,X,N)$
+with fixed $m$ and $N$ may be unsuitable.
+Here is the place where spline approximation comes into play.
 The spline $S(x)$ is piecewise defined function over the interval $(x_0, \ldots x_n)$
 \begin{align*}
     S(x) &=
@@ -32,9 +32,9 @@ The spline $S(x)$ is piecewise defined function over the interval $(x_0, \ldots 
 \end{align*}
 The given points $x_k$ are called \textit{knots}.
 
-Assume that approximation requirement in terms of convergence length $L$ is to approximate the power function $X^j$
+Assume that the approximation requirement in terms of convergence length $L$ is to approximate the power function $X^j$
 bounded by real points $A$ and $B$ such that $A < B$.
-Splines perfectly fits the need to match arbitrary convergence range of power function's $X^j$
+Splines perfectly fit the need to match an arbitrary convergence range for the power function $X^j$ using the
 approximation by $P(m,X,N)$.
 Formally,
 \begin{align*}

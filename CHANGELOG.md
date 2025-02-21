@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 - Equation labeling change
 - Add coefficients U bibliography
 - Fix grammar abstract
+- Fix grammar introduction
+- Fix grammar generalizations
 
 ## [1.0.0] - 2025-02-21
 
