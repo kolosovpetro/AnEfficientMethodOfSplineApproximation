@@ -1,1 +1,48 @@
-﻿
+﻿Previously, we have discussed that polynomial $P(m,X,N)$ approximates power function $X^j$
+in some neighborhood of fixed non-negative integer $N$.
+Approximation by $P(m,X,N)$ can be adjusted by $K$-times multiplication by $X$ for even exponents of power function.
+In general, it is safe to say that power function $X^j$ is approximated by $P(m,X,N) \cdot X^k$,
+where $k=0$ for odd exponent $j$ and $k$ either $k=1$ or $k=-1$ for even exponent $j$
+\begin{align*}
+    X^j \approx
+    \begin{cases}
+        P(m,X,N) \quad         & j=2m+1 \\
+        P(m,X,N) \cdot X \quad & j=2m+2 \\
+        P(m,X,N) \cdot X^{-1} \quad & j=2m \\
+    \end{cases}
+\end{align*}
+which covers arbitrary exponent $j$.
+
+As we also discussed, the lenght $L$ of convergence interval between $X^j$ and approximation by $P(m,X,N)$
+rises as $N$ rise.
+However, the convergence interval is still bounded, which could not satisfy certain approximation scenarios.
+Depending on approximation requirements in terms of convergence interval length $L$ a single polynomial $P(m,X,N)$
+with fixed $m$ and $N$ can be unfit.
+Here is the place where spline approximation comes to play.
+The spline $S(x)$ is piecewise defined function over the interval $(x_0, \ldots x_n)$
+\begin{align*}
+    S(x) &=
+    \begin{cases}
+        f_1(x), & x_0 \leq x < x_1 \\
+        f_2(x), & x_0 \leq x < x_1\\
+        \vdots & \vdots \\
+        f_n(x), & x_{n-1} \leq x \leq x_n
+    \end{cases}
+\end{align*}
+The given points $x_k$ are called \textit{knots}.
+
+Assume that approximation requirement in terms of convergence length $L$ is to approximate the power function $X^j$
+bounded by real points $A$ and $B$ such that $A < B$.
+Splines perfectly fits the need to match arbitrary convergence range of power function's $X^j$
+approximation by $P(m,X,N)$.
+Formally,
+\begin{align*}
+    X^j \approx
+    \begin{cases}
+        P(m,X,N+t_1) \cdot X^{k} \quad & x_0 \leq x < x_1 \\
+        P(m,X,N+t_2) \cdot X^{k} \quad & x_0 \leq x < x_1 \\
+        \vdots & \vdots \\
+        P(m,X,N+t_{n-1}) \cdot X^{k} \quad & x_{n-1} \leq x < x_n
+    \end{cases}
+\end{align*}
+The values of $t_r$ to be adjusted according to approximation requirements in terms of accuracy.
