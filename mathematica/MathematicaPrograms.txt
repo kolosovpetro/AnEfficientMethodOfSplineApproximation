@@ -1,4 +1,4 @@
-﻿(* Requires package: PlotsOfClosedForms.m, see https://github.com/kolosovpetro/AnEfficientMethodOfSplineApproximation*)
+(* Requires package: PlotsOfClosedForms.m, see https://github.com/kolosovpetro/AnEfficientMethodOfSplineApproximation*)
 
 f1[X_] := X^7;
 f2[X_] := P[3, X, 50];
