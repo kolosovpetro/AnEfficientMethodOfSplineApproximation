@@ -1,3 +1,5 @@
+# An efficient method of spline approximation for power function
+
 Let $P(m, X, N)$ be an $m$-degree polynomial in $X\in\mathbb{R}$
 having fixed non-negative integers $m$ and $N$.
 
