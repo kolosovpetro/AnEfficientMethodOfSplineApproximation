@@ -1,8 +1,8 @@
-Use case scenarios of the approximation technique we discuss have their own constraints and limitations.
+The approximation technique above have its own constraints and limitations.
 For instance, approximation requirements should have precisely specified exponent $j$ in $X^j$ because
 for each $j$ there is a matching polynomial $P(m,X,N)$.
 Perfectly, there should be a set precompiled polynomials $P(m,X,N)$ matching precise exponent $j$ in $X^j$ over
-precisely defined approximation range with required error of approximation $E$ as a constraint.
+exactly defined approximation range with required error of approximation $E$ as a constraint.
 Generally, the approximation of power function $X^j$ by $P(m,X,N)$ can be broken down into the following steps
 \begin{enumerate}
     \item Define the exponent $j$ in $X^j$
@@ -31,7 +31,7 @@ of the following properties of $P(m,X, N)$.
 \end{align*}
 Therefore, for each two consequential points $N=X, N=X+1$ the absolute difference is 1, making that range
 at least $1\%$ percentage error for $X^j \leq 100$.
-I have chosen the approximation range $10 \leq X \leq 15$ and $j=3$ intentionally to show the spline approximation with
+The approximation range $10 \leq X \leq 15$ and exponent $j=3$ are chosen intentionally to show the spline approximation with
 percentage error threshold less than $1\%$.
 Therefore, to approximate $X^3$ in the range $10 \leq X \leq 15$, we use the following spline function
 \begin{align}
@@ -51,22 +51,22 @@ Graphically, this linear approximation of cubes looks as follows
     \includegraphics[width=1\textwidth]{sections/images/08_plots_of_cubes_power_with_p_2_10_15}
     ~\caption{
         Approximation of cubes $X^3$ by splines~\eqref{eq:spline_approximation_of_cubes}.
-        Convergence interval is $10 \leq X \leq 15$ with percentage error $E\leq 1\%$.
+        Convergence interval is $10 \leq X \leq 15$ with percentage error $E < 1\%$.
     }
     \label{fig:08_plots_of_cubes_power_with_p_2_10_15}
 \end{figure}
 where the spline knots are integers in the range $10 \leq N \leq 14$.
 
 The same principle applies for even exponent $j=4$ in $X^j$ with the same convergence interval $10 \leq X \leq 15$
-and approximation error under $1\%$ constraints
+and approximation error under $1\%$
 \begin{align}
     X^4 \approx
     \begin{cases}
         P(1,X,10) \cdot X = -2300X + 330X^2, & 10 \leq X < 11 \\
-        P(1,X,10) \cdot X = -3025X + 396X^2, & 11 \leq X < 12 \\
-        P(1,X,10) \cdot X = -3888X + 468X^2, & 12 \leq X < 13 \\
-        P(1,X,10) \cdot X = -4901X + 546X^2, & 13 \leq X < 14 \\
-        P(1,X,10) \cdot X = -6076X + 630X^2, & 14 \leq X \leq 15
+        P(1,X,11) \cdot X = -3025X + 396X^2, & 11 \leq X < 12 \\
+        P(1,X,12) \cdot X = -3888X + 468X^2, & 12 \leq X < 13 \\
+        P(1,X,13) \cdot X = -4901X + 546X^2, & 13 \leq X < 14 \\
+        P(1,X,14) \cdot X = -6076X + 630X^2, & 14 \leq X \leq 15
     \end{cases}
     \label{eq:spline_approximation_fourth_power}
 \end{align}
@@ -76,7 +76,7 @@ Which graphically looks as follows
     \includegraphics[width=1\textwidth]{sections/images/09_plots_of_fourth_power_with_p_2_10_15_times_x}
     ~\caption{
         Approximation of $X^4$ by splines~\eqref{eq:spline_approximation_fourth_power}.
-        Convergence interval is $10 \leq X \leq 15$ with percentage error $E\leq 1\%$.
+        Convergence interval is $10 \leq X \leq 15$ with percentage error $E < 1\%$.
     }
     \label{fig:09_plots_of_fourth_power_with_p_2_10_15_times_x}
 \end{figure}
