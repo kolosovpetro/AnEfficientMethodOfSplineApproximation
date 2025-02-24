@@ -43,14 +43,14 @@ Assume that the function $f_2(x)$ approximates the function $f_1 (x)$, then erro
 Diving straight into the point, we switch our focus to the partial case of polynomial
 $P(2,X,4) = 900X^2 - 6000X + 10624$
 to show the first example of how it approximates the odd power function $X^5$.
-In general, we approximate the polynomial $X^{2m+1}$ using a lower-degree polynomial of degree $m$,
-as shown in the following image
+In general, we approximate the polynomial $X^{2m+1}$ using a lower-degree polynomial of degree $m$.
+The following image demonstrates the approximation of fifth power $X^5$ by
+$P(2,X,4) = 900X^2 - 6000X + 10624$
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{sections/images/03_plots_polynomial_p2_n4_with_fifth}
     ~\caption{Approximation of fifth power $X^5$ by $P(2, X, 4)$.
-    Points of intersection $X=4$, $X=4.42472$, $X=4.99181$.
-    Convergence interval is $4.0 \leq X \leq 5.1$ with percentage error $E < 1\%$.
+    Convergence interval is $4.0 \leq X \leq 5.1$ with a percentage error $E < 1\%$.
     }\label{fig:03_plots_polynomial_p2_n4_with_fifth}
 \end{figure}
 As observed, the polynomial $P(2, X, 4)$ approximates $X^5$ in a certain neighborhood of $N=4$ with
@@ -99,7 +99,7 @@ by means of $K$-times multiplication by $X$, with graphic representation as foll
     \centering
     \includegraphics[width=1\textwidth]{sections/images/07_plot_of_6th_power_with_p_2_4_times_x}
     ~\caption{Approximation of sixth power $X^6$ by $P(2, X, 4) \cdot X$.
-    Convergence interval is $3.9 \leq X \leq 5.1$ with percentage error $E < 3\%$.
+    Convergence interval is $3.9 \leq X \leq 5.1$ with a percentage error $E < 3\%$.
     }\label{fig:07_plot_of_6th_power_with_p_2_4_times_x}
 \end{figure}
 Therefore, we have reached the statement that
