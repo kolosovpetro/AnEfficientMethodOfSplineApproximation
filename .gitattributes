@@ -9,3 +9,4 @@
 *.css linguist-detectable=false
 *.m linguist-detectable=false
 *.nb linguist-detectable=false
+*.cdf linguist-detectable=false

@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 
 - Improve reasoning
 - Update abstract
+- Git attributes
 
 ## [1.0.3] - 2025-02-24
 
