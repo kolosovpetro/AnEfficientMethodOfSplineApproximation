@@ -29,11 +29,11 @@ of the following properties of $P(m,X, N)$.
     P(m,X, X) &= X^{2m+1} \\
     P(m,X, X+1) &= (X+1)^{2m+1} - 1
 \end{align*}
-Therefore, for each two consequential points $N=X, N=X+1$ the absolute difference is 1, making that range
-at least $1\%$ percentage error for $X^j \leq 100$.
+Therefore, for each two consequential points $N=X, N=X+1$ the absolute difference $P(m,X, X) - P(m,X, X+1)$ equals to one,
+consequently, the range $[X, X+1]$ satisfies the $1\%$ error threshold for any pair $j, X$ such that $X^j \leq 100$.
 The approximation range $10 \leq X \leq 15$ and exponent $j=3$ are chosen intentionally to show the spline approximation with
 percentage error threshold less than $1\%$.
-Therefore, to approximate $X^3$ in the range $10 \leq X \leq 15$, we use the following spline function
+Therefore, to approximate the polynomial $X^3$ in the range $10 \leq X \leq 15$, we use the following spline function
 \begin{align}
     X^3 \approx
     \begin{cases}
@@ -51,7 +51,7 @@ Graphically, this linear approximation of cubes looks as follows
     \includegraphics[width=1\textwidth]{sections/images/08_plots_of_cubes_power_with_p_2_10_15}
     ~\caption{
         Approximation of cubes $X^3$ by splines~\eqref{eq:spline_approximation_of_cubes}.
-        Convergence interval is $10 \leq X \leq 15$ with percentage error $E < 1\%$.
+        Convergence interval is $10 \leq X \leq 15$ with a percentage error $E < 1\%$.
     }
     \label{fig:08_plots_of_cubes_power_with_p_2_10_15}
 \end{figure}
@@ -76,7 +76,7 @@ Which graphically looks as follows
     \includegraphics[width=1\textwidth]{sections/images/09_plots_of_fourth_power_with_p_2_10_15_times_x}
     ~\caption{
         Approximation of $X^4$ by splines~\eqref{eq:spline_approximation_fourth_power}.
-        Convergence interval is $10 \leq X \leq 15$ with percentage error $E < 1\%$.
+        Convergence interval is $10 \leq X \leq 15$ with a percentage error $E < 1\%$.
     }
     \label{fig:09_plots_of_fourth_power_with_p_2_10_15_times_x}
 \end{figure}
