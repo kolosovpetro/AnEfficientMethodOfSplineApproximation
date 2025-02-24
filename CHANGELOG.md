@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 - Avoid to use 'I' in discussions
 - Fix abstract
 - Minor fixes to improve the flow
+- Move Mathematica programs to bibliography
+- Update bibtex citation
 
 ## [1.0.1] - 2025-02-21
 

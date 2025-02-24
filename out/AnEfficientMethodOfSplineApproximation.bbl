@@ -65,4 +65,10 @@ Petro Kolosov.
   identity}, 2018.
 \newblock \url{https://oeis.org/A316387}.
 
+\bibitem{kolosovpetro_gist}
+Petro Kolosov.
+\newblock Mathematica programs to generate plots and tables, 2025.
+\newblock
+  \url{https://gist.github.com/kolosovpetro/2b5c55094c66b8d6a97b9798be9a8dec}.
+
 \end{thebibliography}
