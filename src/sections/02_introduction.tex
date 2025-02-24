@@ -16,8 +16,8 @@ where $\coeffA{m}{r}$ is a real coefficient defined recursively, see~\cite{aleks
 For example,
 \input{sections/figures/05_fig_coefficients_a}
 
-Essentially, the polynomial $P(m, X, N)$ is derived from a rearrangement of Faulhaber's formula.
-It was inspired by Knuth's \textit{Johann Faulhaber and sums of powers}, see~\cite{knuth1993johann}.
+Essentially, the polynomial $P(m, X, N)$ is derived from a rearrangement of Faulhaber's formula
+in the context of Knuth's work entitled \textit{Johann Faulhaber and sums of powers}, see~\cite{knuth1993johann}.
 In particular, the polynomial $P(m, X, N)$ yields an identity for odd powers
 \begin{align*}
     P(m, X, X) = X^{2m+1}
@@ -28,10 +28,11 @@ In its extended form
 \end{align*}
 The exact relation between Faulhaber's formula and $P(m,X,N)$ is shown by~\cite{kolosov2025unexpected}.
 
-However, apart from the polynomial identity for odd powers, I've discovered several approximation properties of $P(m,X,N)$.
+However, apart from the polynomial identity for odd powers, a few approximation properties of $P(m,X,N)$
+were discovered in addition.
 Therefore, in this manuscript we explore the approximation properties of the polynomial $P(m,X,N)$.
-I use a few well-known criteria to measure and estimate error of approximation: Absolute error, Relative error and
-Percentage error.
+During our discussion, we utilize the following well-known criteria to measure and estimate
+the error of approximation: Absolute error, Relative error and Percentage error.
 Assume that the function $f_2(x)$ approximates the function $f_1 (x)$, then errors are given by
 \begin{align*}
     \mathrm{Absolute \; Error}   &= \lvert f_1(x) - f_2(x) \rvert \\
@@ -39,10 +40,10 @@ Assume that the function $f_2(x)$ approximates the function $f_1 (x)$, then erro
     \mathrm{Percentage \; Error} &= \frac{\lvert f_1(x) - f_2(x) \rvert}{\lvert f_1(x) \rvert} \times 100\%
 \end{align*}
 
-Diving straight into the point, we switch our focus to the previously mentioned polynomial
+Diving straight into the point, we switch our focus to the partial case of polynomial
 $P(2,X,4) = 900X^2 - 6000X + 10624$
 to show the first example of how it approximates the odd power function $X^5$.
-In fact, we approximate the polynomial $X^{2m+1}$ using a lower-degree polynomial of degree $m$,
+In general, we approximate the polynomial $X^{2m+1}$ using a lower-degree polynomial of degree $m$,
 as shown in the following image
 \begin{figure}[H]
     \centering
@@ -52,8 +53,8 @@ as shown in the following image
     Convergence interval is $4.0 \leq X \leq 5.1$ with percentage error $E < 1\%$.
     }\label{fig:03_plots_polynomial_p2_n4_with_fifth}
 \end{figure}
-As observed, the polynomial $P(2, X, 4)$ approximates $X^5$ in the neighborhood of $N=4$ with
-the convergence interval $4.0 \leq X \leq 5.1$ where the percentage error is less than $1\%$ which is quite remarkable.
+As observed, the polynomial $P(2, X, 4)$ approximates $X^5$ in a certain neighborhood of $N=4$ with
+the convergence interval $4.0 \leq X \leq 5.1$ such that the percentage error is less than $1\%$ which is quite remarkable.
 The following table presents specific values of absolute, relative, and percentage errors for this approximation
 \input{sections/figures/032_polynomials_p2_table_n4}
 
@@ -86,7 +87,7 @@ The polynomial $P(m,X,N)$ is an $m$-degree polynomial in $X \in \mathbb{R}$ with
 It approximates the odd power function $X^{2m+1}$ within a specific neighborhood of $N$.
 The length $L$ of the convergence interval between $X^{2m+1}$ and $P(m,X,N)$ increases as $N$ grows.
 
-For the sake of clear and precise verification of results, I attach mathematica programs to generate
+For the sake of clear and precise verification of results, consider the Mathematica programs to generate
 plots and data tables, so that reader is able to verify the main results of current part of manuscript,
 see the \href{https://gist.github.com/kolosovpetro/2b5c55094c66b8d6a97b9798be9a8dec}{\texttt{link}}.
 
@@ -104,5 +105,5 @@ by means of $K$-times multiplication by $X$, with graphic representation as foll
 Therefore, we have reached the statement that
 the polynomial $P(m,X,N)$ is an $m$-degree polynomial in $X$, having fixed non-negative
 integers $m$ and $N$.
-It approximates the power function $X^{j}$ in some neighborhood of fixed $N$.
-The length of convergence interval between power function $X^j$ and $P(m,X,N) \cdot X^K$ rises as $N$ rise.
+It approximates the power function $X^{j}$ in a certain neighborhood of fixed $N$.
+The length of convergence interval between the power function $X^j$ and $P(m,X,N) \cdot X^K$ increases as $N$ grow.
