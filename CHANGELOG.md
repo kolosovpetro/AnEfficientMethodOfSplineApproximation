@@ -9,14 +9,6 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 
 ### Changed
 
-- Update figure captions
-- Equation labeling change
-- Add coefficients U bibliography
-- Fix grammar abstract
-- Fix grammar introduction
-- Fix grammar generalizations
-- Fix grammar use cases
-- Fix grammar use conclusions
 - Update abstract
 - Avoid to use 'I' in discussions
 - Fix abstract
